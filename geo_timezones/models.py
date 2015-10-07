@@ -12,6 +12,9 @@ class TimezoneManager(GeoManager):
 
 class Timezone(models.Model):
 
+    class Meta:
+        app_label = 'geo_timezones'
+
     timezone = models.CharField(max_length=30)
     geom = PolygonField()
 
